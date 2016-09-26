@@ -1,0 +1,21 @@
+//fonts
+$fontHeading: 'Oxygen', sans-serif;
+$fontBody: 'Source Sans Pro', sans-serif;
+$fontSpecial: 'Bad Script', cursive;
+
+//number variables
+$showcaseWidth: 20em;
+
+//mixins
+@mixin showcaseImg($fileName) {
+	$imgFile: "../../assets/img/milestones/showcase/#{$fileName}.jpg";
+	div {
+		background: 
+			linear-gradient(
+				rgba(0, 0, 50, 0.3),
+				rgba(0, 0, 50, 0.3)
+		    ),
+			url($imgFile) no-repeat;
+		background-size: cover;
+	}
+}

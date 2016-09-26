@@ -1,0 +1,22 @@
+.programBlock {
+	margin: 0 -1em 12vh;
+
+	display: flex;
+	align-items: center;
+
+	&:nth-of-type(2) {
+		flex-direction: row-reverse;
+	}
+}
+
+.programBlock > div {
+	margin: 0 1em;
+}
+
+.programImg {
+	flex: 1;
+}
+
+.programCont {
+	flex: 2;
+}

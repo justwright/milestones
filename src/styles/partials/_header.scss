@@ -1,0 +1,58 @@
+header {
+	height: 5em;
+	width: 100%;
+	position: fixed;
+	background: rgba(79, 211, 255, 0.9);
+
+	display: flex;
+}
+
+header .logo {
+	flex: 4;
+}
+
+nav {
+	height: 100%;
+
+	flex: 8;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+	width: 60%;
+	height: 60%;
+	list-style-type: none;
+
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+nav ul li {
+	height: 100%;
+
+	flex-basis: 35%;
+	display: flex;
+	justify-content: center;
+}
+
+nav ul a {
+	height: 100%;
+	width: 85%;
+	color: #fff;
+	text-decoration: none;
+	transition: color 0.3s ease, background 0.3s ease;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&:hover {
+		color: black;
+		background: rgba(255, 255, 255, 0.5);
+	}
+}

@@ -1,0 +1,38 @@
+.topHero {
+	width: 100%;
+	height: 40em;
+	background: 
+		linear-gradient(
+			rgba(0, 0, 50, 0.3),
+			rgba(0, 0, 50, 0.3)
+	    ),
+		url(../../assets/img/milestones/kids-example.jpg) no-repeat;
+    background-size: cover;
+    background-position: 50% 20%;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.heroCont {
+	padding: 0 10vw;
+
+	display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    h1,
+    p {
+    	margin: 0;
+    	color: #fff;
+    }
+
+	h1 {
+		font-size: 3rem;
+	}
+
+	p {
+		font-size: 1.5em;
+	}
+}

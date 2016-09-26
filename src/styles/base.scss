@@ -1,0 +1,16 @@
+// variables
+@import 'partials/variables';
+
+// normailze
+@import '../../node_modules/normalize-scss/sass/_normalize.scss';
+@include normalize();
+
+// main partials
+@import 'partials/helpers';
+@import 'partials/header';
+@import 'partials/footer';
+@import 'partials/hero';
+@import 'partials/body';
+@import 'partials/homepage';
+@import 'partials/programs';
+@import 'partials/staff';

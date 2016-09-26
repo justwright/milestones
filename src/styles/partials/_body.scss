@@ -1,0 +1,51 @@
+body {
+	font-size: 1.1em;
+	font-family: $fontBody;
+}
+
+body:not(.hasHero) {
+	main {
+		padding-top: 6em;
+	}
+}
+
+main {
+	min-height: 88.5vh;
+
+	display: flex;
+	flex-direction: column;
+}
+
+.mainContent {
+	margin-bottom: 15vh;
+
+	flex: 1;
+}
+
+.container {
+	padding: 0 15vw;
+}
+
+.blockWrap {
+	margin: 0 -1vw;
+
+	display: flex;
+}
+
+.block {
+	margin: 0 1vw;
+	padding: 2em;
+	border: 1px solid black;
+
+	&.main {
+		flex: 3;
+	}
+
+	&.side {
+		flex: 1;
+	}
+}
+
+.block > h2 {
+	margin-top: 0;
+}

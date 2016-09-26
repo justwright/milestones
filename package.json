@@ -1,0 +1,22 @@
+{
+  "name": "milestones",
+  "version": "1.0.0",
+  "description": "Source code for childcareoc.com",
+  "main": "index.html",
+  "scripts": {
+    "start": "http-server src -a localhost -p 8080 -o",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Justin Wright",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.6.0"
+  },
+  "dependencies": {
+    "normalize-scss": "^5.0.3"
+  }
+}
