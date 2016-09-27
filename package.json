@@ -4,7 +4,7 @@
   "description": "Source code for childcareoc.com",
   "main": "index.html",
   "scripts": {
-    "start": "http-server src -a localhost -p 8080 -o",
+    "start": "gulp scss && gulp js && http-server src -a localhost -p 8080 -o",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Justin Wright",
