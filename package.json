@@ -21,6 +21,7 @@
     "gulp-uglify": "^2.0.0"
   },
   "dependencies": {
+    "lory.js": "^2.2.0",
     "normalize-scss": "^5.0.3"
   }
 }

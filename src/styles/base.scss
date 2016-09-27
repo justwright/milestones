@@ -5,6 +5,8 @@
 @import '../../node_modules/normalize-scss/sass/_normalize.scss';
 @include normalize();
 
+@import 'partials/slider';
+
 // main partials
 @import 'partials/helpers';
 @import 'partials/header';

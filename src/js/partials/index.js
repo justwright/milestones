@@ -1,7 +1,9 @@
-const blahblah = 2;
+import {lory} from 'lory.js';
 
-const array = [1,2,3,4];
+document.addEventListener('DOMContentLoaded', () => {
+    const slider = document.querySelector('.js_slider');
 
-const theFunction = array.map((numb) => {
-    return numb * 4;
+    lory(slider, {
+        // options going here
+    });
 });
