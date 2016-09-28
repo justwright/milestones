@@ -8,6 +8,10 @@ const cssnano = require('gulp-cssnano');
 const rename = require('gulp-rename');
 const babel = require('gulp-babel');
 const uglify = require('gulp-uglify');
+const browserify = require('browserify');
+const babelify = require('babelify');
+const source = require('vinyl-source-stream');
+const gutil = require('gulp-util');
 
 gulp.task('scss', () =>
   gulp.src('./src/styles/**/*.scss')
@@ -22,14 +26,27 @@ gulp.task('scss', () =>
     .pipe(gulp.dest('./src/styles'))
 );
 
-gulp.task('js', () =>
-  gulp.src('./src/**/*.js')
-    .pipe(sourcemaps.init())
-    .pipe(babel())
-    .pipe(sourcemaps.write())
-    .pipe(rename('milestones.js'))
-    .pipe(gulp.dest('./src/js'))
-);
+// gulp.task('js', () =>
+//   gulp.src('./src/**/*.js')
+//     .pipe(sourcemaps.init())
+//     .pipe(babel())
+//     .pipe(sourcemaps.write())
+//     .pipe(rename('milestones.js'))
+//     .pipe(gulp.dest('./src/js'))
+// );
+
+gulp.task('js', () => {
+	browserify({
+    	entries: './src/js/partials/index.js',
+    	debug: true
+  	})
+    .transform(babelify)
+    .on('error',gutil.log)
+    .bundle()
+    .on('error',gutil.log)
+    .pipe(source('milestones.js'))
+    .pipe(gulp.dest('./src/js'));
+});
 
 gulp.task('build-html', () => {
   gulp.src('./src/*.html')
@@ -56,6 +73,6 @@ gulp.task('build-assets', () => {
 gulp.task('build', ['build-css', 'build-js', 'build-html', 'build-assets']);
 
 gulp.task('watch', () => {
-  gulp.watch('./src/styles/**/*.scss', ['scss'])
-  gulp.watch('./src/**/*.js', ['js'])
+  gulp.watch('./src/styles/**/*.scss', ['scss']);
+  gulp.watch('./src/**/*.js', ['js']);
 });

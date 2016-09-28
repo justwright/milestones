@@ -1,9 +1,11 @@
 import {lory} from 'lory.js';
 
-document.addEventListener('DOMContentLoaded', () => {
-    const slider = document.querySelector('.js_slider');
+if (document.querySelector('.js_slider')) {
+    document.addEventListener('DOMContentLoaded', () => {
+        const slider = document.querySelector('.js_slider');
 
-    lory(slider, {
-        // options going here
+        lory(slider, {
+            rewind: true
+        });
     });
-});
+}
