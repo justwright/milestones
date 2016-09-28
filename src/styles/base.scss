@@ -2,10 +2,11 @@
 @import 'partials/variables';
 
 // normailze
-@import '../../node_modules/normalize-scss/sass/_normalize.scss';
+@import '../../node_modules/normalize-scss/sass/normalize';
 @include normalize();
 
-@import 'partials/slider';
+// carousel styles
+@import '../../node_modules/flickity/dist/flickity';
 
 // main partials
 @import 'partials/helpers';
