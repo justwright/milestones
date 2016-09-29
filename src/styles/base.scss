@@ -6,7 +6,7 @@
 @include normalize();
 
 // carousel styles
-@import '../../node_modules/flickity/dist/flickity';
+@import 'partials/slider';
 
 // main partials
 @import 'partials/helpers';

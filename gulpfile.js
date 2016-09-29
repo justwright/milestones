@@ -26,15 +26,6 @@ gulp.task('scss', () =>
     .pipe(gulp.dest('./src/styles'))
 );
 
-// gulp.task('js', () =>
-//   gulp.src('./src/**/*.js')
-//     .pipe(sourcemaps.init())
-//     .pipe(babel())
-//     .pipe(sourcemaps.write())
-//     .pipe(rename('milestones.js'))
-//     .pipe(gulp.dest('./src/js'))
-// );
-
 gulp.task('js', () => {
 	browserify({
     	entries: './src/js/partials/index.js',
