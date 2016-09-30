@@ -10,7 +10,7 @@ $showcaseWidth: 20em;
 @mixin showcaseImg($fileName) {
 	$imgFile: "../../assets/img/milestones/showcase/#{$fileName}.jpg";
 	div {
-		background: 
+		background:
 			linear-gradient(
 				rgba(0, 0, 50, 0.3),
 				rgba(0, 0, 50, 0.3)

@@ -1,14 +1,46 @@
 header {
-	height: 5em;
+	height: 5rem;
 	width: 100%;
 	position: fixed;
 	background: rgba(79, 211, 255, 0.9);
-
 	display: flex;
+	z-index: 99999;
 }
 
 header .logo {
 	flex: 4;
+}
+
+header.splashBanner {
+	padding: 0 15vw;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: column;
+	color: #fff;
+
+	div {
+		flex: 0 1 auto;
+	}
+
+	.mainText {
+		margin: 0;
+		font-size: 1.5rem;
+	}
+
+	.subText {
+		font-size: 1.1rem;
+	}
+
+	@media (min-width: 1000px) {
+		justify-content: space-around;
+		flex-direction: row;
+		align-items: center;
+
+		div {
+			flex: 1;
+		}
+	}
 }
 
 nav {

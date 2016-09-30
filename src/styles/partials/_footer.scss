@@ -8,7 +8,7 @@ footer {
 
 .mapCont {
 	height: 100%;
-	
+
 	flex: 5;
 	iframe {
 		width: 100%;
@@ -19,6 +19,7 @@ footer {
 
 .footerCont {
 	padding: 3vh 7vw;
+	position: relative;
 
 	flex: 7;
 	display: flex;
@@ -40,7 +41,7 @@ footer {
 
 .socialLinks {
 	margin: 0 -0.5em;
-	
+
 
 	display: flex;
 
@@ -62,4 +63,15 @@ footer {
 		height: 100%;
 		width: 100%;
 	}
+}
+
+.minimal .footerCont > div {
+	flex: 0 1 auto;
+}
+
+.copyright {
+    margin: 0 0.5rem 0 0;
+	position: absolute;
+	bottom: 0;
+	right: 0;
 }
