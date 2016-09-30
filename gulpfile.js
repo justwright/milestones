@@ -12,6 +12,7 @@ const browserify = require('browserify');
 const babelify = require('babelify');
 const source = require('vinyl-source-stream');
 const gutil = require('gulp-util');
+const livereload = require('gulp-livereload');
 
 gulp.task('scss', () =>
   gulp.src('./src/styles/**/*.scss')
@@ -24,6 +25,7 @@ gulp.task('scss', () =>
     .pipe(sourcemaps.write())
     .pipe(rename('milestones.css'))
     .pipe(gulp.dest('./src/styles'))
+    .pipe(livereload())
 );
 
 gulp.task('js', () => {
@@ -64,6 +66,7 @@ gulp.task('build-assets', () => {
 gulp.task('build', ['build-css', 'build-js', 'build-html', 'build-assets']);
 
 gulp.task('watch', () => {
+  livereload.listen();
   gulp.watch('./src/styles/**/*.scss', ['scss']);
   gulp.watch('./src/**/*.js', ['js']);
 });

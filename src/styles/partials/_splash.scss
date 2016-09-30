@@ -1,0 +1,20 @@
+.splashBlockContainer {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2em -1em 0;
+}
+
+.splashBlockContainer .splashBlock {
+    margin: 2em 1em;
+    padding: 0.5em 1em;
+    flex: 3;
+    background: #F2F2F2;
+
+    img {
+        max-width: 100%;
+    }
+}
+
+.mainContent.splash {
+    margin-bottom: 10vh;
+}
