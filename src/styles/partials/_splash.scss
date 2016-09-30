@@ -1,20 +1,35 @@
 .splashBlockContainer {
-    display: flex;
+    display: block;
     flex-wrap: wrap;
-    margin: 2em -1em 0;
+    margin: 2em -2% 0;
+
+    @media (min-width: $xs) {
+        display: flex;
+    }
 }
 
 .splashBlockContainer .splashBlock {
-    margin: 2em 1em;
+    margin: 2em 2%;
     padding: 0.5em 1em;
-    flex: 3;
+    flex: 0 1 46%;
     background: #F2F2F2;
+
+    @media (min-width: $md) {
+        flex: 0 1 29%;
+    }
 
     img {
         max-width: 100%;
     }
+
+    dt {
+        font-weight: bold;
+    }
+    dd {
+        margin: 0;
+    }
 }
 
 .mainContent.splash {
-    margin-bottom: 10vh;
+    margin-bottom: 5vh;
 }

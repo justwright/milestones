@@ -12,27 +12,18 @@ header .logo {
 }
 
 header.splashBanner {
-	padding: 0 15vw;
 	display: flex;
 	align-items: flex-start;
 	justify-content: center;
 	flex-direction: column;
 	color: #fff;
+	@include mainPadding();
 
 	div {
 		flex: 0 1 auto;
 	}
 
-	.mainText {
-		margin: 0;
-		font-size: 1.5rem;
-	}
-
-	.subText {
-		font-size: 1.1rem;
-	}
-
-	@media (min-width: 1000px) {
+	@media (min-width: $md) {
 		justify-content: space-around;
 		flex-direction: row;
 		align-items: center;
@@ -40,6 +31,24 @@ header.splashBanner {
 		div {
 			flex: 1;
 		}
+	}
+}
+
+.splashBanner .mainText {
+	margin: 0;
+	font-size: 1.1rem;
+
+	@media (min-width: $xs) {
+		font-size: 1.5rem;
+	}
+}
+
+.splashBanner .subText {
+	text-align: right;
+	font-size: 0.9rem;
+
+	@media (min-width: $xs) {
+		font-size: 1.1rem;
 	}
 }
 
