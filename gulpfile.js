@@ -13,6 +13,8 @@ const babelify = require('babelify');
 const source = require('vinyl-source-stream');
 const gutil = require('gulp-util');
 const livereload = require('gulp-livereload');
+const del = require('del');
+const runSequence = require('run-sequence');
 
 gulp.task('scss', () =>
   gulp.src('./src/styles/**/*.scss')
@@ -41,9 +43,13 @@ gulp.task('js', () => {
     .pipe(gulp.dest('./src/js'));
 });
 
-gulp.task('build-html', () => {
+gulp.task('build-html', ['clean-html'], () => {
   gulp.src('./src/*.html')
     .pipe(gulp.dest('./dist'));
+});
+
+gulp.task('clean-html', () => {
+  return del(['dist/*.html']);
 });
 
 gulp.task('build-css', ['scss'], () => {
@@ -58,12 +64,22 @@ gulp.task('build-js', ['js'], () => {
     .pipe(gulp.dest('./dist/js'));
 });
 
-gulp.task('build-assets', () => {
+gulp.task('build-assets', ['clean-assets'], () => {
   gulp.src('./src/assets/**')
     .pipe(gulp.dest('./dist/assets'));
 });
 
-gulp.task('build', ['build-css', 'build-js', 'build-html', 'build-assets']);
+gulp.task('clean-assets', () => {
+  return del(['dist/assets']);
+});
+
+gulp.task('clean-dist', () => {
+  return del(['dist/**']);
+});
+
+gulp.task('build', () => {
+  runSequence('clean-dist', ['build-css', 'build-js', 'build-html', 'build-assets']);
+});
 
 gulp.task('watch', () => {
   livereload.listen();
