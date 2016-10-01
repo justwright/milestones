@@ -1,6 +1,7 @@
 const Flickity = require('flickity');
 
-const slider = new Flickity('.carousel', {
+const sliderElement = document.querySelector('.carousel');
+const slider = new Flickity(sliderElement, {
     pageDots: false,
     wrapAround: true,
     autoPlay: 4000
@@ -16,5 +17,9 @@ const initYear = () => {
 
 // Init functions
 document.addEventListener('DOMContentLoaded', () => {
-  initYear();
+    initYear();
 });
+
+window.onload = () => {
+    slider.resize();
+};

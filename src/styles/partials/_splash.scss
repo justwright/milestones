@@ -1,7 +1,8 @@
 .splashBlockContainer {
     display: block;
     flex-wrap: wrap;
-    margin: 2em -2% 0;
+    // margin: 2em -2% 0;
+    margin: 2em 0 0;
 
     @media (min-width: $xs) {
         display: flex;
