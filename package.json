@@ -5,7 +5,8 @@
   "main": "index.html",
   "scripts": {
     "start": "gulp scss && gulp js && http-server src -a localhost -p 8080 -o",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gulp build"
   },
   "author": "Justin Wright",
   "license": "ISC",
