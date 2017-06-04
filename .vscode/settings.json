@@ -4,6 +4,7 @@
     "dist": "explorerExcludedFiles",
     "*.css": "explorerExcludedFiles",
     "npm-debug.log": "explorerExcludedFiles",
+    "**/.DS_Store": "explorerExcludedFiles",
     "src/js/milestones.js": "explorerExcludedFiles"
   }
 }
