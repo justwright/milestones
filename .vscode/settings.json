@@ -1,0 +1,9 @@
+{
+  "files.exclude": {
+    "node_modules": "explorerExcludedFiles",
+    "dist": "explorerExcludedFiles",
+    "*.css": "explorerExcludedFiles",
+    "npm-debug.log": "explorerExcludedFiles",
+    "src/js/milestones.js": "explorerExcludedFiles"
+  }
+}

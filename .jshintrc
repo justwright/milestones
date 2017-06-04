@@ -1,8 +1,0 @@
-{
-  "predef": [
-    "document",
-    "window",
-    "-Promise"
-  ],
-  "esnext": true
-}
