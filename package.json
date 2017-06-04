@@ -31,6 +31,7 @@
     },
     "dependencies": {
         "flickity": "^2.0.4",
+        "jump.js": "^1.0.2",
         "normalize-scss": "^5.0.3"
     }
 }
