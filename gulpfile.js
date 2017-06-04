@@ -17,13 +17,13 @@ const del = require('del');
 const runSequence = require('run-sequence');
 
 gulp.task('scss', () =>
-  gulp.src('./src/styles/**/*.scss')
+    gulp.src('./src/styles/**/*.scss')
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({
-            browsers: ['last 2 versions'],
-            cascade: false
-          }))
+        browsers: ['last 2 versions'],
+        cascade: false
+    }))
     .pipe(sourcemaps.write())
     .pipe(rename('milestones.css'))
     .pipe(gulp.dest('./src/styles'))
@@ -31,58 +31,58 @@ gulp.task('scss', () =>
 );
 
 gulp.task('js', () => {
-	browserify({
-    	entries: './src/js/partials/index.js',
-    	debug: true
-  	})
-    .transform(babelify)
-    .on('error',gutil.log)
-    .bundle()
-    .on('error',gutil.log)
-    .pipe(source('milestones.js'))
-    .pipe(gulp.dest('./src/js'));
+    browserify({
+            entries: './src/js/partials/index.js',
+            debug: true
+        })
+        .transform(babelify)
+        .on('error', gutil.log)
+        .bundle()
+        .on('error', gutil.log)
+        .pipe(source('milestones.js'))
+        .pipe(gulp.dest('./src/js'));
 });
 
 gulp.task('build-html', ['clean-html'], () => {
-  gulp.src('./src/*.html')
-    .pipe(gulp.dest('./dist'));
+    gulp.src('./src/*.html')
+        .pipe(gulp.dest('./dist'));
 });
 
 gulp.task('clean-html', () => {
-  return del(['dist/*.html']);
+    return del(['dist/*.html']);
 });
 
 gulp.task('build-css', ['scss'], () => {
-  gulp.src('./src/**/*.css')
-    .pipe(cssnano())
-    .pipe(gulp.dest('./dist'));
+    gulp.src('./src/**/*.css')
+        .pipe(cssnano())
+        .pipe(gulp.dest('./dist'));
 });
 
 gulp.task('build-js', ['js'], () => {
-  gulp.src('./src/js/*.js')
-    .pipe(uglify())
-    .pipe(gulp.dest('./dist/js'));
+    gulp.src('./src/js/*.js')
+        .pipe(uglify())
+        .pipe(gulp.dest('./dist/js'));
 });
 
 gulp.task('build-assets', ['clean-assets'], () => {
-  gulp.src('./src/assets/**')
-    .pipe(gulp.dest('./dist/assets'));
+    gulp.src('./src/assets/**')
+        .pipe(gulp.dest('./dist/assets'));
 });
 
 gulp.task('clean-assets', () => {
-  return del(['dist/assets']);
+    return del(['dist/assets']);
 });
 
 gulp.task('clean-dist', () => {
-  return del(['dist/**']);
+    return del(['dist/**']);
 });
 
 gulp.task('build', () => {
-  runSequence('clean-dist', ['build-css', 'build-js', 'build-html', 'build-assets']);
+    runSequence('clean-dist', ['build-css', 'build-js', 'build-html', 'build-assets']);
 });
 
 gulp.task('watch', () => {
-  livereload.listen();
-  gulp.watch('./src/styles/**/*.scss', ['scss']);
-  gulp.watch('./src/**/*.js', ['js']);
+    livereload.listen();
+    gulp.watch('./src/styles/**/*.scss', ['scss']);
+    gulp.watch('./src/**/*.js', ['js']);
 });
