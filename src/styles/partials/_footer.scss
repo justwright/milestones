@@ -54,9 +54,14 @@ footer {
     color: #fff;
     background: rgba(79, 211, 255, 0.9);
     border-radius: 100%;
+    transition: color 0.3s ease, background 0.3s ease;
     svg {
         height: 100%;
         width: 100%;
+    }
+    &:hover {
+        color: rgba(79, 211, 255, 0.9);
+        background: #fff;
     }
 }
 

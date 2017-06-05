@@ -39,8 +39,12 @@ header .logo .mainText {
     margin: 0;
     font-size: 1.1rem;
     text-decoration: none;
+    transition: color 0.3s ease;
     @media (min-width: $xs) {
         font-size: 1.5rem;
+    }
+    &:hover {
+        color: #e2e2e2;
     }
 }
 
