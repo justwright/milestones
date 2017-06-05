@@ -21,7 +21,7 @@ main {
 
 .mainContent {
     margin: 0 0 15vh;
-    flex: 1;
+    flex: 0 1 auto;
     .hasHero & {
         margin: 5rem 0 15vh;
     }
