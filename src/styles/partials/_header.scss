@@ -1,16 +1,49 @@
 header {
     padding: 0 3vw;
-    height: 5rem;
     width: 100%;
+    height: 5rem;
     position: fixed;
     background: rgba(79, 211, 255, 0.9);
-    display: flex;
+    display: block;
     align-items: center;
     z-index: 99999;
+    transition: height 0.2s linear;
+    @media (min-width: $sm) {
+        display: flex;
+    }
+    &.mobileNavActive {
+        height: 10rem;
+    }
 }
 
 header .logo {
     flex: 3;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 0 0 0;
+    @media (min-width: $sm) {
+        display: block;
+        padding: 0;
+    }
+}
+
+.logo button {
+    color: #fff;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    svg {
+        width: 2rem;
+        height: 2rem;
+    }
+    @media (min-width: $sm) {
+        display: none;
+    }
+    .mobileNavActive & {
+        background: rgba(0, 0, 0, 0.2);
+    }
 }
 
 header.splashBanner {
@@ -62,6 +95,14 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
+    visibility: hidden;
+    // transition: visibility 0.3s linear;
+    @media (min-width: $sm) {
+        visibility: visible;
+    }
+    .mobileNavActive & {
+        visibility: visible;
+    }
 }
 
 nav ul {
@@ -99,5 +140,8 @@ nav ul button {
     &:hover {
         color: black;
         background: rgba(255, 255, 255, 0.5);
+    }
+    .mobileNavActive & {
+        height: 50%;
     }
 }

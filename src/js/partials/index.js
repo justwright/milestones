@@ -17,13 +17,19 @@ const initYear = () => {
 };
 
 const contactButton = document.getElementById('contactScroll');
+const mobileNavToggle = document.getElementById('mobileNavToggle');
 
 // Init functions
 document.addEventListener('DOMContentLoaded', () => {
     initYear();
 
     contactButton.addEventListener('click', () => {
+        document.getElementById('pageHeader').classList.toggle('mobileNavActive');
         jump(document.body.scrollHeight);
+    });
+
+    mobileNavToggle.addEventListener('click', () => {
+        document.getElementById('pageHeader').classList.toggle('mobileNavActive');
     });
 });
 
