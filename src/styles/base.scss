@@ -1,13 +1,10 @@
 // variables
 @import 'partials/variables';
-
 // normailze
 @import '../../node_modules/normalize-scss/sass/normalize';
 @include normalize();
-
 // carousel styles
 @import 'partials/slider';
-
 // main partials
 @import 'partials/helpers';
 @import 'partials/header';
@@ -18,3 +15,4 @@
 @import 'partials/programs';
 @import 'partials/staff';
 @import 'partials/splash';
+@import 'partials/file';

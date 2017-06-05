@@ -2,5 +2,6 @@ node_modules
 dist
 *.css
 npm-debug.log
+**/.DS_Store
 
 src/js/milestones.js

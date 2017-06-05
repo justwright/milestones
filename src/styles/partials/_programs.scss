@@ -1,22 +1,27 @@
 .programBlock {
-	margin: 0 -1em 12vh;
-
-	display: flex;
-	align-items: center;
-
-	&:nth-of-type(2) {
-		flex-direction: row-reverse;
-	}
-}
-
-.programBlock > div {
-	margin: 0 1em;
-}
-
-.programImg {
-	flex: 1;
+    margin: 0 -1rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    @media (min-width: $sm) {
+        flex-direction: row;
+    }
 }
 
 .programCont {
-	flex: 2;
+    margin: 0 0 2rem 0;
+    padding: 0 1rem;
+    flex: 0 1 50%;
+    dd {
+        margin: 0;
+    }
+    ul {
+        padding: 0 0 0 2rem;
+    }
+}
+
+.innerProgramCont {
+    padding: 1rem;
+    height: 100%;
+    background: rgba(242, 242, 242, 0.5);
 }
