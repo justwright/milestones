@@ -1,55 +1,50 @@
 * {
-	box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-	font-size: 1.1em;
-	font-family: $fontBody;
+    font-size: 1.1em;
+    font-family: $fontBody;
 }
 
 body:not(.hasHero) {
-	main {
-		padding-top: 6em;
-	}
+    main {
+        padding-top: 6em;
+    }
 }
 
 main {
-	min-height: 88.5vh;
-
-	display: flex;
-	flex-direction: column;
+    min-height: 88.5vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .mainContent {
-	margin: 5rem 0 15vh;
-
-	flex: 1;
+    margin: 0 0 15vh;
+    flex: 1;
 }
 
 .container {
-	@include mainPadding();
+    @include mainPadding();
 }
 
 .blockWrap {
-	margin: 0 -1vw;
-
-	display: flex;
+    margin: 0 -1vw;
+    display: flex;
 }
 
 .block {
-	margin: 0 1vw;
-	padding: 2em;
-	border: 1px solid black;
-
-	&.main {
-		flex: 3;
-	}
-
-	&.side {
-		flex: 1;
-	}
+    margin: 0 1vw;
+    padding: 2em;
+    border: 1px solid black;
+    &.main {
+        flex: 3;
+    }
+    &.side {
+        flex: 1;
+    }
 }
 
-.block > h2 {
-	margin-top: 0;
+.block>h2 {
+    margin-top: 0;
 }
