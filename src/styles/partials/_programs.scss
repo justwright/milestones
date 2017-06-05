@@ -3,7 +3,7 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    @media (min-width: $xs) {
+    @media (min-width: $sm) {
         flex-direction: row;
     }
 }
