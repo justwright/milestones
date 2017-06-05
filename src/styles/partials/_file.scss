@@ -28,5 +28,9 @@
     margin: 0 -1rem;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     list-style-type: none;
+    @media (min-width: $sm) {
+        flex-direction: row;
+    }
 }

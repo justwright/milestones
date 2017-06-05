@@ -2,6 +2,10 @@
     margin: 0 -1rem;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
+    @media (min-width: $xs) {
+        flex-direction: row;
+    }
 }
 
 .programCont {

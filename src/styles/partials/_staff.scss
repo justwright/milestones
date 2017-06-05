@@ -1,17 +1,33 @@
 .staffImg img {
-    width: 20em;
-    height: 20em;
+    width: 75%;
     border-radius: 100%;
+    @media (min-width: $xs) {
+        width: 20em;
+        height: 20em;
+    }
+}
+
+.staffImg {
+    text-align: center;
+    @media (min-width: $sm) {
+        text-align: left;
+    }
 }
 
 .staffBlock {
-    display: flex;
+    display: block;
     margin: 0 0 10vh 0;
     h3 {
         margin-top: 0;
     }
+    @media (min-width: $sm) {
+        display: flex;
+    }
 }
 
 .staffCont {
-    margin: 0 0 0 3rem;
+    margin: 0;
+    @media (min-width: $sm) {
+        margin: 0 0 0 3rem;
+    }
 }
