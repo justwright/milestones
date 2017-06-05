@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initYear();
 
     contactButton.addEventListener('click', () => {
-        document.getElementById('pageHeader').classList.toggle('mobileNavActive');
+        document.getElementById('pageHeader').classList.remove('mobileNavActive');
         jump(document.body.scrollHeight);
     });
 
