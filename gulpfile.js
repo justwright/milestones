@@ -6,7 +6,6 @@ const sourcemaps = require('gulp-sourcemaps');
 const autoprefixer = require('gulp-autoprefixer');
 const cssnano = require('gulp-cssnano');
 const rename = require('gulp-rename');
-const babel = require('gulp-babel');
 const uglify = require('gulp-uglify');
 const browserify = require('browserify');
 const babelify = require('babelify');
@@ -32,19 +31,19 @@ gulp.task('scss', () =>
 
 gulp.task('js', () => {
     browserify({
-            entries: './src/js/partials/index.js',
-            debug: true
-        })
-        .transform(babelify)
-        .on('error', gutil.log)
-        .bundle()
-        .on('error', gutil.log)
-        .pipe(source('milestones.js'))
-        .pipe(gulp.dest('./src/js'));
+        entries: './src/js/partials/index.js',
+        debug: true
+    })
+    .transform(babelify)
+    .on('error', gutil.log)
+    .bundle()
+    .on('error', gutil.log)
+    .pipe(source('milestones.js'))
+    .pipe(gulp.dest('./src/js'));
 });
 
 gulp.task('build-html', ['clean-html'], () => {
-    gulp.src('./src/*.html')
+    gulp.src('./src/**/*.html')
         .pipe(gulp.dest('./dist'));
 });
 
