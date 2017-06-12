@@ -61,7 +61,7 @@ class Footer extends Component {
           </div>
 
           <div className="copyright">
-            &copy; <span className="year"></span> <a href="https://github.com/justwright">Justin Wright</a>
+            &copy; {new Date().getFullYear()} <a href="https://github.com/justwright">Justin Wright</a>
           </div>
         </div>
       </footer>
