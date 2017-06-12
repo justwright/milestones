@@ -1,37 +1,19 @@
 {
-    "name": "milestones",
-    "version": "1.0.0",
-    "description": "Source code for childcareoc.com",
-    "main": "index.html",
-    "scripts": {
-        "start": "gulp scss && gulp js && http-server src -a localhost -p 8080 -o",
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "build": "gulp build"
-    },
-    "author": "Justin Wright",
-    "license": "ISC",
-    "devDependencies": {
-        "babel-preset-es2015": "^6.14.0",
-        "babelify": "^7.3.0",
-        "browserify": "^13.1.0",
-        "del": "^2.2.2",
-        "eslint": "^3.19.0",
-        "gulp": "^3.9.1",
-        "gulp-autoprefixer": "^3.1.1",
-        "gulp-babel": "^6.1.2",
-        "gulp-cssnano": "^2.1.2",
-        "gulp-livereload": "^3.8.1",
-        "gulp-rename": "^1.2.2",
-        "gulp-sass": "^2.3.2",
-        "gulp-sourcemaps": "^1.6.0",
-        "gulp-uglify": "^2.0.0",
-        "gulp-util": "^3.0.7",
-        "run-sequence": "^1.2.2",
-        "vinyl-source-stream": "^1.1.0"
-    },
-    "dependencies": {
-        "flickity": "^2.0.4",
-        "jump.js": "^1.0.2",
-        "normalize-scss": "^5.0.3"
-    }
+  "name": "milestones",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^15.5.4",
+    "react-router": "^4.1.1",
+    "react-router-dom": "^4.1.1"
+  },
+  "devDependencies": {
+    "react-scripts": "1.0.7"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
 }
