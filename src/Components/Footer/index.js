@@ -1,11 +1,31 @@
 import React, { Component } from 'react';
-import ReactSVG from 'react-svg';
+import FooterLink from './footerLink';
 import facebookIcon from '../../images/svg/facebook.svg';
 import instagramIcon from '../../images/svg/instagram.svg';
 import emailIcon from '../../images/svg/email.svg';
 
 class Footer extends Component {
   render() {
+    const footerLinks = [
+      {
+        className: 'iconFacebook',
+        link: 'https://www.facebook.com/MilestonesAcademyChildcare',
+        newTab: true,
+        icon: facebookIcon
+      },
+      {
+        className: 'iconInstagram',
+        link: 'https://www.instagram.com/milestonesacademyoc',
+        newTab: true,
+        icon: instagramIcon
+      },
+      {
+        className: 'iconEmail',
+        link: 'mailto:MilestonesChildcareOC@gmail.com',
+        icon: emailIcon
+      }
+    ];
+
     return (
       <footer className="footer">
         <div className="mapCont">
@@ -26,30 +46,17 @@ class Footer extends Component {
               <strong>Hours:</strong><br/>Monday - Friday:<br/>6:30AM - 6:00PM</p>
             <p>(949) 588-7000</p>
             <ul className="socialLinks">
-              <li>
-                <a href="https://www.facebook.com/MilestonesAcademyChildcare" target="_blank" rel="noopener noreferrer">
-                  <ReactSVG
-                    path={facebookIcon}
-                    className='iconFacebook'
+              {footerLinks.map((link, i) => {
+                return (
+                  <FooterLink
+                    key={i}
+                    className={link.className}
+                    link={link.link}
+                    newTab={link.newTab}
+                    icon={link.icon}
                   />
-                </a>
-              </li>
-              <li>
-                <a href="https://www.instagram.com/milestonesacademyoc" target="_blank" rel="noopener noreferrer">
-                  <ReactSVG
-                    path={instagramIcon}
-                    className='iconInstagram'
-                  />
-                </a>
-              </li>
-              <li>
-                <a href="mailto:MilestonesChildcareOC@gmail.com">
-                  <ReactSVG
-                    path={emailIcon}
-                    className='iconEmail'
-                  />
-                </a>
-              </li>
+                );
+              })}
             </ul>
           </div>
 
