@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import ReactSVG from 'react-svg';
+import mobileToggle from '../../images/svg/mobileToggle.svg';
 
 class Header extends Component {
   render() {
@@ -8,7 +10,9 @@ class Header extends Component {
         <div className="logo">
           <Link to='/'><h1 className="mainText">Milestones Academy Childcare Center</h1></Link>
           <button type="button" id="mobileNavToggle">
-            <svg className="icon icon-menu"><use xlinkHref="#icon-menu"></use></svg>
+            <ReactSVG 
+              path={mobileToggle}
+            />
           </button>
         </div>
 
