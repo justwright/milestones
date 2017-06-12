@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { Component } from 'react';
 import {
-  BrowserRouter as Router,
   Route,
   Switch
 } from 'react-router-dom';
@@ -9,14 +8,18 @@ import Landing from './Components/Landing';
 import About from './Components/About';
 import Forms from './Components/Forms';
 
-const Routes = (props) => (
-    <Router {...props}>
+class Routes extends Component {
+  render() {
+    return (
+      <main>
         <Switch>
             <Route exact path="/" component={Landing}/>
             <Route path="/about" component={About}/>
             <Route path="/forms" component={Forms}/>
         </Switch>
-    </Router>
-);
+      </main>
+    );
+  }
+}
 
 export default Routes;

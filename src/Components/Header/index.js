@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom';
 class Header extends Component {
   render() {
     return (
-      <header className="App-header">
+      <header>
         <div className="logo">
           <Link to='/'><h1 className="mainText">Milestones Academy Childcare Center</h1></Link>
           <button type="button" id="mobileNavToggle">
-            <svg class="icon icon-menu"><use xlinkHref="#icon-menu"></use></svg>
+            <svg className="icon icon-menu"><use xlinkHref="#icon-menu"></use></svg>
           </button>
         </div>
 
