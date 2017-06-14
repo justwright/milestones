@@ -27,6 +27,10 @@ main {
     }
 }
 
+.mainContent.splash {
+    margin-bottom: 5vh;
+}
+
 .container {
     @include mainPadding();
 }
