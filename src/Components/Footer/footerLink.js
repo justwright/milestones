@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import ReactSVG from 'react-svg';
-import './footer.css';
 
 class FooterLink extends Component {
   render() {
