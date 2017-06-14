@@ -1,0 +1,5 @@
+@import 'partials/_variables.scss';
+@import 'partials/_body.scss';
+
+@import 'normalize-scss/sass/_normalize.scss';
+@include normalize();

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import ReactSVG from 'react-svg';
 import mobileToggle from '../../images/svg/mobileToggle.svg';
+import './header.css';
 
 class Header extends Component {
   render() {

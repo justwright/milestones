@@ -1,0 +1,44 @@
+//media query breakpoints
+$lg: 1200px;
+$md: 1000px;
+$sm: 750px;
+$xs: 500px;
+$xxs: 320px;
+
+$bodyPadding: 0 15vw;
+$bodyPaddingMedium: 0 5vw;
+$bodyPaddingSmall: 0 1vw;
+
+//fonts
+$fontHeading: 'Oxygen', sans-serif;
+$fontBody: 'Source Sans Pro', sans-serif;
+$fontSpecial: 'Bad Script', cursive;
+
+//number variables
+$showcaseWidth: 20em;
+
+//mixins
+@mixin showcaseImg($fileName) {
+	$imgFile: "../../assets/img/milestones/showcase/#{$fileName}.jpg";
+	div {
+		background:
+			linear-gradient(
+				rgba(0, 0, 50, 0.3),
+				rgba(0, 0, 50, 0.3)
+		    ),
+			url($imgFile) no-repeat;
+		background-size: cover;
+	}
+}
+
+@mixin mainPadding() {
+	padding: $bodyPaddingSmall;
+
+	@media (min-width: $sm) {
+		padding: $bodyPaddingMedium;
+	}
+
+	@media (min-width: $lg) {
+		padding: $bodyPadding;
+	}
+}

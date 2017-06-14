@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import './programs.scss';
+import './staff.css';
 
 class About extends Component {
   render() {

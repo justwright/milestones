@@ -3,6 +3,7 @@ import FooterLink from './footerLink';
 import facebookIcon from '../../images/svg/facebook.svg';
 import instagramIcon from '../../images/svg/instagram.svg';
 import emailIcon from '../../images/svg/email.svg';
+import './footer.css';
 
 class Footer extends Component {
   render() {
