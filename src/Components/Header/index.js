@@ -5,12 +5,39 @@ import mobileToggle from '../../images/svg/mobileToggle.svg';
 import './header.css';
 
 class Header extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = { showMobileMenu: false };
+
+    this.toggleMobileMenu = this.toggleMobileMenu.bind(this);
+    this.closeMobileMenu = this.closeMobileMenu.bind(this);
+  }
+
+  toggleMobileMenu() {
+    this.setState(prevState => ({
+      showMobileMenu: !prevState.showMobileMenu
+    }));
+  }
+
+  closeMobileMenu() {
+    if (this.state.showMobileMenu) {
+      this.setState(() => ({
+        showMobileMenu: false
+      }));
+    }
+  }
+
   render() {
     return (
-      <header>
+      <header className={this.state.showMobileMenu ? 'mobileNavActive' : ''}>
         <div className="logo">
-          <Link to='/'><h1 className="mainText">Milestones Academy Childcare Center</h1></Link>
-          <button type="button" id="mobileNavToggle">
+          <Link to='/' onClick={this.closeMobileMenu}><h1 className="mainText">Milestones Academy Childcare Center</h1></Link>
+          <button 
+            type="button" 
+            id="mobileNavToggle"
+            onClick={this.toggleMobileMenu}
+          >
             <ReactSVG 
               path={mobileToggle}
             />
@@ -19,9 +46,9 @@ class Header extends Component {
 
         <nav>
           <ul>
-            <li><button type="button">Contact Us</button></li>
-            <li><Link to="/about">About Us</Link></li>
-            <li><Link to="/forms">Forms</Link></li>
+            <li><button type="button" onClick={this.closeMobileMenu}>Contact Us</button></li>
+            <li><Link to="/about" onClick={this.closeMobileMenu}>About Us</Link></li>
+            <li><Link to="/forms" onClick={this.closeMobileMenu}>Forms</Link></li>
           </ul>
         </nav>
       </header>
