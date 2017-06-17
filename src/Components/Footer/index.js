@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import FooterLink from './footerLink';
-import facebookIcon from '../../images/svg/facebook.svg';
-import instagramIcon from '../../images/svg/instagram.svg';
-import emailIcon from '../../images/svg/email.svg';
+import facebookIcon from '../../assets/svg/facebook.svg';
+import instagramIcon from '../../assets/svg/instagram.svg';
+import emailIcon from '../../assets/svg/email.svg';
 import './footer.css';
 
 class Footer extends Component {
