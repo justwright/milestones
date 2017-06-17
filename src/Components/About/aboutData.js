@@ -11,7 +11,53 @@ const staffData = [
 
 const programData = [
     {
-
+        name: 'Toddler Program',
+        description: 'Ages 18 months to 30 months',
+        details: [
+            'Hands-on exploration with shapes, color, number, and letter recognition',
+            'Sorting, grouping, and patterning of manipulatives',
+            'Tactile and sensory exploration',
+            'Active play, Circle time activities, and Early art expression',
+            'Following directions, working and playing with others',
+            'Gross and fine motor skills through material construction (blocks, clay, free form materials)'
+        ]
+    },
+    {
+        name: 'Preschool',
+        description: 'Ages 30 months to 4 years old',
+        details: [
+            'Patterns, forms, and function',
+            'Building and modeling',
+            'Reading readiness and Early phonics',
+            'Math readiness and Hands-on science exploration',
+            'Dramatic play',
+            'Arts and craft activities'
+        ]
+    },
+    {
+        name: 'Prekindergarten',
+        description: 'Ages 4 to 5 years old',
+        details: [
+            'Reading along and alone, language arts',
+            'Counting, Math concepts, Science lab and hands-on exploration',
+            'Arts and crafts, independent creation',
+            'Manipulate, master, create, and build',
+            'Dramatic play',
+            'Constructive socialization, inter-social skill building',
+            'Constructive communication skills'
+        ]
+    },
+    {
+        name: 'Afterschool Care',
+        description: '6 Years old',
+        details: [
+            'Silent, sustained reading',
+            'Activities to foster teamwork',
+            'Problem solving',
+            'Assistance with homework',
+            'Constructive socialization and inter-social skill building',
+            'Constructive communication skills'
+        ]
     }
 ]
 
